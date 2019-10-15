@@ -1,0 +1,45 @@
+<!-- catHealth: Array<category> = new Array<category>();
+    catStudy: Array<category> = new Array<category>();
+    catPersonal: Array<category> = new Array<category>();
+    catWork: Array<category> = new Array<category>();
+    catOthers: Array<category> = new Array<category>(); -->
+      <h1 class="header-class">Category</h1>
+<div class="keep-c-list-container">
+  <!-- <label>Not-Started</label> -->
+
+  <!-- Populate notStartedNotes -->
+  <mat-grid-list cols="5" class="notes">
+  <app-category *ngFor="let note of catHealth" [note]="note" class="Note-card"></app-category>
+</mat-grid-list>
+</div>
+<div class="keep-c-list-container">
+  <!-- <label>Started</label> -->
+  <mat-grid-list cols="5" class="notes">
+  <app-category *ngFor="let note of catStudy" [note]="note" class="Note-card"></app-category>
+</mat-grid-list>
+  <!-- Populate startednotes -->
+</div>
+<div class="keep-c-list-container">
+  <!-- <label>Completed</label> -->
+
+  <!-- Populate completednotes -->
+  <mat-grid-list cols="5" class="notes">
+  <app-category *ngFor="let note of catPersonal" [note]="note" class="Note-card"></app-category>
+</mat-grid-list>
+</div>
+<div class="keep-c-list-container">
+  <!-- <label>Completed</label> -->
+
+  <!-- Populate completedNotes -->
+  <mat-grid-list cols="5" class="notes">
+  <app-category *ngFor="let note of catWork" [note]="note" class="Note-card"></app-category>
+</mat-grid-list>
+</div>
+<div class="keep-c-list-container">
+  <!-- <label>Completed</label> -->
+
+  <!-- Populate completedNotes -->
+  <mat-grid-list cols="5" class="notes">
+  <app-category *ngFor="let note of catOthers" [note]="note" class="Note-card"></app-category>
+</mat-grid-list>
+</div>

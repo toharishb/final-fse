@@ -1,0 +1,70 @@
+<!-- Label to display any error messages -->
+<div align="center">
+  <label class="error-message">{{ errMessage }}</label>
+</div>
+
+<!-- Expansion panel to add new notes -->
+<div class="note-container form-group">
+  <mat-expansion-panel class="note-expansion-panel">
+    <mat-expansion-panel-header>
+      <mat-panel-title>Take a note</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="note-form">
+      <mat-form-field>
+        <input matInput placeholder="Enter Note Title" name="title" [(ngModel)]="note.noteTitle">
+      </mat-form-field>
+
+      <mat-form-field>
+        <!-- <input type="text" matInput placeholder="Enter Note Description" name="text" [(ngModel)]="note.text"> -->
+        <textarea matInput placeholder="Enter Note Description" name="text" [(ngModel)]="note.noteContent"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Select state" [(ngModel)]="note.noteStatus">
+          <mat-option *ngFor="let state of states" [value]="state">{{ state }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+    </div>
+
+    <div style="margin-top: 5px">
+      <mat-chip *ngIf="note.category.categoryName" [selectable]="selectable" [removable]="removable" (remove)="removeCategory()">
+        {{note.category.categoryName}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </div>
+    <div style="margin-top: 5px">
+      <mat-chip *ngFor="let reminder of note.reminders" [selectable]="selectable" [removable]="removable" (remove)="remove(reminder)">
+        {{reminder.reminderType}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </div>
+    <mat-action-row>
+      <div class="container-fluid padding">
+        <div class="row padding">
+          <div class="col-md-3">
+            <div style="margin-top: 5px">
+              <button mat-raised-button *ngIf="catgeoryFlag" (click)="openDialogCategory()">  Add category!!  
+              </button>
+            </div>
+          </div>
+          <div class="col-md-3">
+
+            <div style="margin-top: 5px">
+              <button mat-raised-button (click)="openDialog()">
+                <i class="material-icons">
+                  alarm
+                </i>
+                Add reminder!!</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+
+            <button mat-button class="btn btn-primary" (click)="addNote()">Done</button>
+          </div>
+        </div>
+      </div>
+    </mat-action-row>
+  </mat-expansion-panel>
+</div>

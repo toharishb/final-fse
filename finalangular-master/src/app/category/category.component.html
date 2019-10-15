@@ -1,0 +1,23 @@
+
+<!-- <mat-grid-list cols="5" class="noteList" > -->
+    <!-- <mat-grid-tile> -->
+    <div class="category-view" style="margin-left: 100px">
+      <mat-card *ngIf="note.noteTitle" class="notecard">
+  
+          <mat-card-title *ngIf="note.noteTitle">
+            <mat-chip *ngIf="note.category.categoryName">
+              <i class="material-icons">
+                {{catIcon}}
+              </i>{{note.category.categoryName}}
+    
+            </mat-chip>
+          </mat-card-title>      
+        <mat-card-content>{{note.category.categoryDescription}}</mat-card-content>
+        <div style="margin-top: 5px;">
+            {{note.noteTitle}}
+        </div>
+        
+      </mat-card>
+    </div>
+    <!-- </mat-grid-tile> -->
+  <!-- </mat-grid-list> -->

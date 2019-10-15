@@ -1,0 +1,30 @@
+<h1 class="header-class">Reminders</h1>
+<div class="keep-c-list-container">
+    <mat-grid-list cols="10" class="notes">
+        <app-reminders *ngFor="let note of remindernotes" [note]="note" class="Note-card"></app-reminders>
+      </mat-grid-list>
+
+  <!-- <mat-grid-list cols="5" class="notes">
+    <app-reminders *ngFor="let note of remindernotesHourly" [note]="note" class="Note-card"></app-reminders>
+  </mat-grid-list>
+
+  <mat-grid-list cols="5" class="notes">
+    <app-reminders *ngFor="let note of remindernotesDaily" [note]="note" class="Note-card"></app-reminders>
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="5" class="notes">
+    <app-reminders *ngFor="let note of remindernotesWeekly" [note]="note" class="Note-card"></app-reminders>
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="5" class="notes">
+    <app-reminders *ngFor="let note of remindernotesMonthly" [note]="note" class="Note-card"></app-reminders>
+  </mat-grid-list>
+
+
+  <mat-grid-list cols="5" class="notes">
+    <app-reminders *ngFor="let note of remindernotesYearly" [note]="note" class="Note-card"></app-reminders>
+  </mat-grid-list> -->
+
+</div>

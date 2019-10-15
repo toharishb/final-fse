@@ -1,0 +1,76 @@
+<!-- Label to display any error messages -->
+
+<label class="error-message">{{ errMessage }}</label>
+
+
+<div class="edit-note-container">
+  <h2>Edit: {{ note.title }}</h2>
+    <div class="note-form">
+      <mat-form-field>
+        <input matInput  name="editTitle" [(ngModel)]="note.noteTitle">
+      </mat-form-field>
+
+      <mat-form-field>
+        <!-- <input type="text" matInput placeholder="Enter Note Description" name="text" [(ngModel)]="note.text"> -->
+        <textarea matInput placeholder="Enter Note Description" name="editText" [(ngModel)]="note.noteContent"></textarea>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Select state" name="editStatus" [(ngModel)]="note.noteStatus">
+          <mat-option *ngFor="let state of states" [value]="state">{{ state }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div style="margin-top: 5px">
+        <mat-chip (click)="openDialogCategory()" *ngIf="note.category.categoryName" [selectable]="selectable"
+                 [removable]="removable" (remove)="removeCategory()">
+          {{note.category.categoryName}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+      </div>
+      <div style="margin-top: 5px">
+      <mat-chip (click)="openDialog(reminder)"  *ngFor="let reminder of note.reminders" [selectable]="selectable"
+               [removable]="removable" (remove)="remove(reminder)">
+        {{reminder.reminderType}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </div>
+
+    
+    <mat-action-row>
+    
+        <div style="margin-top: 5px">
+          <button mat-raised-button *ngIf="categoryFlag" (click)="openDialogCategoryAdd()">Add category!!
+        </button>
+        </div>
+            <div style="margin-top: 5px">
+              <button mat-raised-button (click)="openDialogAdd()">
+              <i class="material-icons">
+                alarm
+              </i>
+              Add reminder!!</button>
+            </div>
+            <button mat-button class="btn btn-primary" (click)="onSave()">Save</button>
+          </mat-action-row>
+</div>
+
+
+<!-- <div class="note-container">
+  <h2>Edit: {{ note.title }}</h2>
+
+  <div class="keep-note-form">
+    <form class="keep-note-form" [formGroup]="noteForm" (ngSubmit)="onSave(noteForm)">
+      <mat-form-field>
+        <input matInput placeholder="Enter Title" name="editTitle" formControlName="title" id="title" 
+        [ngModel]="note.title" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Enter Description" formControlName="text" [ngModel]="note.text" id="text"></textarea>
+      </mat-form-field>
+      <mat-select placeholder="Select state" formControlName="state" [ngModel]="note.state">
+        <mat-option *ngFor="let state of states" [value]="state">{{ state }}</mat-option>
+      </mat-select>
+      <button mat-button [disabled]="noteForm.invalid">Save</button>
+    </form>
+  </div>
+</div> -->

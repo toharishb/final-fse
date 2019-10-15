@@ -1,0 +1,15 @@
+.notecard {
+
+    max-width: 400px;
+    width: 400px;
+}
+
+.noteList {
+    flex-direction: column;
+}
+.mat-chip {
+    font-size: 25px;
+}
+.category-view {
+    display: inline-block;
+}

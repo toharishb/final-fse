@@ -1,0 +1,20 @@
+.notecard {
+
+    max-width: 400px;
+    width: 450px;
+}
+
+.noteList {
+    flex-direction: column;
+}
+.mat-chip {
+    font-size: 25px;
+}
+.keep-c-list-container {
+    margin-top: 2%;
+}
+
+.header-class {
+    margin-left: 100px;
+    text-align: left;
+}

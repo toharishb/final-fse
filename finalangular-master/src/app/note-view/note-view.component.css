@@ -1,0 +1,19 @@
+
+.note-list-container
+{
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-top: 25vh;
+    max-width: 80vw;
+    flex-flow: wrap;
+    
+}
+
+.note-card
+{
+    height: 25vh;
+    width: 30vw;
+    padding: 5px;
+}

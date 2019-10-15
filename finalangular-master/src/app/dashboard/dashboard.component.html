@@ -1,0 +1,31 @@
+<!-- NoteTakerComponent to be displayed as part of DashboardComponent -->
+
+<mat-sidenav-container class="example-container">
+
+    <mat-sidenav style="width: 150px;transform: translate3d(0px, 0px, 0px);
+    visibility: visible;background-color:snow;" mode="side" opened>
+        <div class="side-nav-div">
+             <div class="button-style">
+                <button (click)="routeTonoteview()" mat-raised-button>Notes</button>
+            </div>
+            <div class="button-style">
+                <button (click)="routeTocategory()" mat-raised-button>Category</button>
+            </div>
+            <div class="button-style">
+                <button (click)="routeToreminder()" mat-raised-button>Reminders</button>
+            </div>
+
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+       <!-- <app-note-taker></app-note-taker> -->
+
+
+        <!-- Following router outlet displays the NoteViewComponent or ListViewComponent based on primary route -->
+        <router-outlet></router-outlet>
+
+        <!-- Following named router outlet displays the EditViewComponent based on the secondary route -->
+         <router-outlet name="noteEditOutlet"></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

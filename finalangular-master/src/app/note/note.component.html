@@ -1,0 +1,38 @@
+
+
+  <!-- <mat-grid-tile> -->
+    <div class="noteview">
+  <mat-card  *ngIf="note.noteTitle" class="notecard">
+    <mat-card-title *ngIf="note.noteTitle" >{{note.noteTitle}}</mat-card-title>
+    <mat-card-content>{{note.noteContent}}</mat-card-content>
+    <div style="margin-top: 5px;">
+      <mat-chip  *ngIf="note.category.categoryName">
+        <i class="material-icons">
+          label
+        </i>{{note.category.categoryName}}
+        
+      </mat-chip>
+    </div>
+    <div style="margin-top: 5px">
+    <mat-chip color="primary" *ngFor="let reminder of note.reminders">
+      <i class="material-icons">
+        alarm
+      </i>{{reminder.reminderType}}
+      
+    </mat-chip>
+    <div style="text-align: right;margin-bottom: 5px">
+        <button mat-icon-button (click)="openEditNoteView()">
+            <i matTooltip='Edit' class="material-icons">
+              edit
+            </i>
+          </button>
+        <button mat-icon-button (click)="deleteNote()">
+    <i matTooltip='Remove' class="material-icons">
+      delete
+    </i>
+  </button>
+  </div>
+  </div>
+  </mat-card>
+</div>
+<!-- </mat-grid-tile> -->

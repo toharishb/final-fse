@@ -1,0 +1,13 @@
+<div>Add reeminder</div>
+  <mat-form-field>
+    <textarea matInput placeholder="Reminder title" name="text" [(ngModel)]="reminder.reminderName"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Enter reminder Description" name="text" [(ngModel)]="reminder.reminderDescription"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Select Reminder type" [(ngModel)]="reminder.reminderType">
+      <mat-option *ngFor="let reminderType of reminderTypes" [value]="reminderType">{{ reminderType }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button class="btn btn-primary" (click)="addreminder()">Add</button>

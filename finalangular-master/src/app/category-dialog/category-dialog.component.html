@@ -1,0 +1,10 @@
+<h3>Add Category</h3>
+<mat-form-field>
+  <mat-select placeholder="Select category" [(ngModel)]="category.categoryName">
+    <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <textarea matInput placeholder="Enter Category content Description" name="text" [(ngModel)]="category.categoryDescription"></textarea>
+</mat-form-field>
+<button mat-button class="btn btn-primary" (click)="addcategory()">Add</button>

@@ -1,0 +1,47 @@
+.note-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 70vw;
+    padding-right: 20%;
+}
+
+.note-form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 25%;
+    /* margin: 10vh 15vw; */
+    margin-top: 25vh;
+    /* flex-wrap: wrap; */
+ 
+}
+
+.reminderhover {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  
+  .remindericon:hover .reminderhover {
+    visibility: visible;
+  }

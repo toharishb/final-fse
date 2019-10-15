@@ -1,0 +1,23 @@
+
+<!-- <mat-grid-list cols="5" class="noteList" > -->
+  <!-- <mat-grid-tile> -->
+  <div *ngIf="note.noteTitle" class="reminder-view" style="margin-left: 100px">
+    <mat-card *ngFor="let reminder of note.reminders" class="notecard">
+
+      <mat-card-title *ngIf="note.noteTitle">
+        <mat-chip *ngIf="reminder.reminderName">
+          <i class="material-icons">
+            alarm_on
+          </i>{{reminder.reminderType}}
+        </mat-chip>
+        <div>{{reminder.reminderName}}</div>
+      </mat-card-title>
+      <mat-card-content>{{reminder.reminderDescription}}</mat-card-content>
+      <div style="margin-top: 5px;">
+        {{note.noteTitle}}
+      </div>
+
+    </mat-card>
+  </div>
+  <!-- </mat-grid-tile> -->
+<!-- </mat-grid-list> -->

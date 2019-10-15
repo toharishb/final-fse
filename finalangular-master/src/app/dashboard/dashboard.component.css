@@ -1,0 +1,23 @@
+.example-container {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: aliceblue;    
+  }
+  .side-nav-div {
+    padding-top: 0;
+  }
+
+  .button-style {
+    padding-bottom: 10px;
+  }
+  .button-style button {
+    text-align: left;
+    font-size: 20px;
+    min-width: 150px;
+    line-height: 50px;
+    padding-top: 10px;
+    border: outset;
+  }

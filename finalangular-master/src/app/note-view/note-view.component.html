@@ -1,0 +1,8 @@
+<app-note-taker></app-note-taker>
+<div class="keep-c-note-container">
+		<mat-grid-list cols="5" class="notes">
+		<app-note *ngFor="let note of notes" [note]="note" class="note-card"></app-note>	
+		</mat-grid-list>
+</div>
+
+	

@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">Keep
+	<div *ngIf="isloggedIn" class="keep-c-toggle-view">
+		<button  mat-icon-button (click)="logout()">
+			<i matTooltip="Logout" class="material-icons">
+					lock_open
+				  </i>
+				</button>
+		<!--<button  mat-icon-button (click)="userprofileRoute()">
+			<i matTooltip="Manage your account" class="material-icons">
+					account_circle
+				  </i>
+				</button>-->
+	</div>
+	
+</mat-toolbar>
+<!-- *ngIf="isNoteView"
+*ngIf="!isNoteView" -->

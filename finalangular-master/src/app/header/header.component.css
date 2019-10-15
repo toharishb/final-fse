@@ -1,0 +1,12 @@
+/*.keep-c-toggle-view {
+	width: 100%;
+	margin-left: 95%;
+	cursor: pointer;
+}*/
+
+.keep-c-toggle-view{
+
+	position:fixed;
+	right:10px;
+	top:5px;
+ }
