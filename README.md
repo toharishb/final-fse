@@ -12,7 +12,7 @@ The code is a demo code for keep note app where we can add note content,catagory
         c)open localhost:4200 in chrome
  2)Run Backend by using docker or Spring services
       *)Using docker
-          a)we can run services using docker file which attached as docker-compose.yml
+          a)we can run services using docker file which attached as docker-compose.yml(path backend folder )
           b)use command docker-compose up command in backend code folder to run backend
       *)Using services in Backend folder
           a)Run each service from sts as run as spring boot application
